@@ -59,11 +59,10 @@ Escrevemos como uma maison: sóbrio, declarativo, seguro. A grandiosidade vem da
 ## 4. Instagram (@vertex.devs)
 
 **Nome:** Vertex — Engenharia & IA
-**Bio oficial:**
+**Bio oficial** (menos é mais — a bio afirma, o site explica):
 ```
-Alta engenharia de software & IA.
-Sistemas sob medida, do conceito ao deploy.
-Mais de 300 projetos. Poucos por vez.
+Engenharia no seu ponto mais alto.
+Poucos projetos por vez.
 ```
 **Link:** https://vertexdevs.org · **Categoria:** Empresa de tecnologia da informação
 
