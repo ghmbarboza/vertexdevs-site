@@ -399,3 +399,10 @@ section { padding-inline: 1.5rem; }
   .process-steps li { border-left: 0; }
   .hero { padding-top: 7.5rem; }
 }
+
+/* ---------- emblema em partículas (hero home) ---------- */
+.hero-canvas {
+  position: absolute; inset: 0; z-index: 1;
+  pointer-events: none;
+  opacity: 0.85;
+}

@@ -17,14 +17,16 @@
   if (heroEls.length) {
     const tl = gsap.timeline({ defaults: { ease: 'expo.out' } });
     const mark = document.querySelector('[data-hero-mark]');
-    if (mark) tl.fromTo(mark, { opacity: 0, scale: 0.9 }, { opacity: 0.1, scale: 1, duration: 1.8 });
+    const hasCanvas = !!document.querySelector('.hero-canvas');
+    if (mark && !hasCanvas) tl.fromTo(mark, { opacity: 0, scale: 0.9 }, { opacity: 0.1, scale: 1, duration: 1.8 });
+    if (mark && hasCanvas) mark.style.opacity = '0';
     tl.fromTo(heroEls, { opacity: 0, y: 42 }, { opacity: 1, y: 0, duration: 1.05, stagger: 0.1 }, mark ? '-=1.4' : 0);
   }
 
   /* parallax do selo no scroll */
-  const mark = document.querySelector('[data-hero-mark]');
-  if (mark) {
-    gsap.to(mark, {
+  const mark2 = document.querySelector('[data-hero-mark]');
+  if (mark2 && !document.querySelector('.hero-canvas')) {
+    gsap.to(mark2, {
       yPercent: -16, rotate: 10, ease: 'none',
       scrollTrigger: { trigger: '.hero', start: 'top top', end: 'bottom top', scrub: true }
     });
