@@ -61,7 +61,7 @@ Escrevemos como uma maison: sóbrio, declarativo, seguro. A grandiosidade vem da
 **Nome:** Vertex — Engenharia & IA
 **Bio oficial** (a bio é a fachada do ateliê — afirma, não explica; o site responde):
 ```
-Um ateliê de engenharia & IA.
+Alta engenharia de software & IA.
 Cada sistema, uma peça única.
 Consultas privadas ↓
 ```
