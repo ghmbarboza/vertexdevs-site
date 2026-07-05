@@ -86,6 +86,9 @@ Poucos projetos por vez. Cada um, uma peça única.
 #VertexDevs #EngenhariaDeSoftware #IA
 ```
 
+### Protocolo de publicação (Instagram ⇄ Facebook)
+Instagram e Facebook são **um canal só com duas vitrines**: todo post do @vertex.devs é publicado SIMULTANEAMENTE na página "Vertex Devs" do Facebook (mesma arte, mesma legenda), via cross-post na API (`platforms: [instagram, facebook]` num único create). Nada é publicado num sem o outro.
+
 ## 5. Prompt-base gpt-image-2
 
 Toda arte da Vertex sai deste template. Variar apenas o `[TEMA]`; o estilo é fixo.
