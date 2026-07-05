@@ -237,6 +237,7 @@ section { padding-inline: 1.5rem; }
   max-width: var(--content-width); margin: 0 auto;
   display: grid; grid-template-columns: repeat(6, 1fr); gap: 1.5rem;
 }
+.product-grid { perspective: 1400px; }
 .product-card {
   grid-column: span 3;
   position: relative;
@@ -244,8 +245,9 @@ section { padding-inline: 1.5rem; }
   border: 1px solid var(--color-line);
   overflow: hidden;
   display: flex; flex-direction: column;
-  transition: border-color 350ms ease, box-shadow 600ms var(--ease-out-expo), transform 600ms var(--ease-out-expo);
+  transition: border-color 350ms ease, box-shadow 600ms var(--ease-out-expo);
   will-change: transform;
+  transform-style: preserve-3d;
 }
 .product-card::after {
   content: ""; position: absolute; inset: 0; pointer-events: none;
@@ -254,8 +256,7 @@ section { padding-inline: 1.5rem; }
 }
 .product-card:hover {
   border-color: var(--color-hairline);
-  box-shadow: 0 30px 80px oklch(0% 0 0 / 0.55);
-  transform: translateY(-5px);
+  box-shadow: 0 40px 100px oklch(0% 0 0 / 0.6), 0 0 40px oklch(58% 0.16 255 / 0.08);
 }
 .product-card:hover::after { border-color: oklch(80% 0.08 85 / 0.12); }
 .product-lg { grid-column: span 6; }
@@ -424,4 +425,46 @@ section { padding-inline: 1.5rem; }
 @media (prefers-reduced-motion: reduce) {
   .hero-video { display: none; }
   .hero-media { background: url('assets/hero-poster.jpg') center / cover no-repeat; }
+}
+
+
+/* ---------- vitrine: glint, brilho especular e profundidade ---------- */
+.card-glare {
+  position: absolute; inset: 0; z-index: 3; pointer-events: none;
+  opacity: 0;
+  background: radial-gradient(26rem 26rem at var(--gx, 50%) var(--gy, 50%), oklch(90% 0.02 250 / 0.10), transparent 60%);
+  transition: opacity 500ms ease;
+}
+.product-card:hover .card-glare { opacity: 1; }
+
+.card-glint {
+  position: absolute; inset: -20%; z-index: 3; pointer-events: none;
+  background: linear-gradient(115deg, transparent 42%, oklch(92% 0.03 250 / 0.14) 50%, oklch(80% 0.08 85 / 0.10) 54%, transparent 62%);
+  transform: translateX(-160%) skewX(-8deg);
+}
+
+.product-card figure { position: relative; z-index: 1; }
+.product-card .product-body { position: relative; z-index: 2; background: var(--color-surface); }
+.product-card .product-index { z-index: 4; }
+
+/* hairline dourada que se desenha na base da imagem */
+.card-hairline {
+  position: absolute; left: 0; bottom: 0; height: 1px; width: 100%; z-index: 4;
+  background: linear-gradient(90deg, var(--color-gold), oklch(80% 0.08 85 / 0.15), transparent);
+  transform: scaleX(0); transform-origin: left center;
+}
+
+/* título com shimmer no hover */
+.product-card h3 {
+  background: linear-gradient(110deg, var(--color-platinum) 30%, oklch(97% 0.01 250) 42%, var(--color-platinum) 54%, var(--color-platinum) 100%);
+  background-size: 220% 100%;
+  background-position: 100% 0;
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+  transition: background-position 900ms var(--ease-out-expo);
+}
+.product-card:hover h3 { background-position: 0% 0; }
+
+@media (prefers-reduced-motion: reduce) {
+  .card-glare, .card-glint { display: none; }
+  .card-hairline { transform: none; }
 }

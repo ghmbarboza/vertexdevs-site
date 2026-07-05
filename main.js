@@ -33,7 +33,7 @@
   }
 
   /* ---- reveals ---- */
-  gsap.utils.toArray('[data-reveal]').forEach((el) => {
+  gsap.utils.toArray('[data-reveal]').filter((el) => !el.classList.contains('product-card')).forEach((el) => {
     gsap.fromTo(el, { opacity: 0, y: 34 }, {
       opacity: 1, y: 0, duration: 1, ease: 'expo.out',
       scrollTrigger: { trigger: el, start: 'top 86%', once: true }

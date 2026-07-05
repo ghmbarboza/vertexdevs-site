@@ -21,7 +21,7 @@
 - [ ] Grid com 6+ peças no padrão maison (temos 4 — faltam 2)
 - [ ] 3 destaques (Stories highlights) com capas no padrão: **A Coleção**, **O Método**, **Consultas**
 - [ ] Automação comentário→DM configurada e testada na Zernio (gatilho: palavra "consulta" ou comentário em post boostado → DM sóbria com convite + link)
-- [ ] Cadência automatizada ligada: **3 posts/semana** (seg/qua/sex 18h BRT), fila de 30 dias agendada na Zernia — mix: 40% posicionamento, 40% coleção (capacidades), 20% método/bastidor
+- [ ] Cadência automatizada ligada: **5 posts/semana** (seg–sex 18h BRT), fila de 30 dias (20 peças) agendada na Zernio — mix: 50% coleção, 25% posicionamento/manifesto, 15% método, 10% Reels extra
 
 **Gate G0 → Fase 1:** tudo acima checado. Sem exceção.
 
@@ -85,7 +85,9 @@
 
 # ANEXO v2.0 — Nível de execução
 
-## Calendário editorial (30 dias, 12 peças · seg/qua/sex 18h BRT)
+## Calendário editorial (30 dias, 20 peças · seg–sex 18h BRT) — v2.1 frequência ampliada
+
+*(Calendário original de 12 peças abaixo mantido como espinha; as 8 peças extras são: 4 singles da coleção com as artes existentes do site, 2 manifestos novos, 1 Reel extra e 1 carrossel-tour da coleção.)*
 | # | Dia | Formato | Peça | Gancho |
 |---|-----|---------|------|--------|
 | 1 | Seg 1 | Carrossel ×4 | Coleção — Cotações B2B | "Horas de cotação. Minutos de sistema." |
