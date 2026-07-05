@@ -40,6 +40,67 @@
     });
   });
 
+  /* ---- vitrine: entrada cinematográfica + glint + tilt 3D ---- */
+  const fine = matchMedia('(hover: hover) and (pointer: fine)').matches;
+  gsap.utils.toArray('.product-card').forEach((card, i) => {
+    const fig = card.querySelector('figure');
+    const img = card.querySelector('figure img');
+    const idx = card.querySelector('.product-index');
+    const tags = card.querySelectorAll('.product-stack li');
+
+    /* camadas dinâmicas: glint, glare e hairline */
+    const glint = document.createElement('div'); glint.className = 'card-glint';
+    const glare = document.createElement('div'); glare.className = 'card-glare';
+    card.appendChild(glint); card.appendChild(glare);
+    let hairline = null;
+    if (fig) { hairline = document.createElement('div'); hairline.className = 'card-hairline'; fig.appendChild(hairline); }
+
+    /* entrada: cortina + imagem assentando + índice + hairline + tags */
+    const tl = gsap.timeline({
+      scrollTrigger: { trigger: card, start: 'top 86%', once: true },
+      defaults: { ease: 'expo.out' }
+    });
+    tl.fromTo(card,
+        { opacity: 0, y: 70, clipPath: 'inset(14% 8% 14% 8%)' },
+        { opacity: 1, y: 0, clipPath: 'inset(0% 0% 0% 0%)', duration: 1.15, delay: (i % 2) * 0.09 });
+    if (img) tl.fromTo(img, { scale: 1.28, yPercent: 6 }, { scale: 1.02, yPercent: 0, duration: 1.6 }, '<');
+    if (idx) tl.fromTo(idx, { opacity: 0, x: 26 }, { opacity: 1, x: 0, duration: 0.8 }, '-=1.1');
+    if (hairline) tl.to(hairline, { scaleX: 1, duration: 1.1, ease: 'power3.inOut' }, '-=1.0');
+    if (tags.length) tl.fromTo(tags, { opacity: 0, y: 12 }, { opacity: 1, y: 0, duration: 0.5, stagger: 0.06 }, '-=0.9');
+    tl.fromTo(glint, { xPercent: -160 }, { xPercent: 160, duration: 1.2, ease: 'power2.inOut' }, '-=1.2');
+
+    /* tilt 3D + glare seguindo o cursor (só desktop) */
+    if (fine) {
+      const rx = gsap.quickTo(card, 'rotationX', { duration: 0.6, ease: 'power3.out' });
+      const ry = gsap.quickTo(card, 'rotationY', { duration: 0.6, ease: 'power3.out' });
+      const ipx = img ? gsap.quickTo(img, 'xPercent', { duration: 0.8, ease: 'power3.out' }) : null;
+      const ipy = img ? gsap.quickTo(img, 'yPercent', { duration: 0.8, ease: 'power3.out' }) : null;
+      gsap.set(card, { transformPerspective: 1200 });
+
+      card.addEventListener('pointermove', (e) => {
+        const r = card.getBoundingClientRect();
+        const px = (e.clientX - r.left) / r.width - 0.5;
+        const py = (e.clientY - r.top) / r.height - 0.5;
+        rx(-py * 5); ry(px * 6);
+        if (ipx) ipx(-px * 2.4);
+        if (ipy) ipy(-py * 2.4);
+        card.style.setProperty('--gx', ((px + 0.5) * 100) + '%');
+        card.style.setProperty('--gy', ((py + 0.5) * 100) + '%');
+      }, { passive: true });
+
+      card.addEventListener('pointerleave', () => { rx(0); ry(0); if (ipx) ipx(0); if (ipy) ipy(0); }, { passive: true });
+
+      /* glint extra + zoom da imagem ao passar o mouse */
+      card.addEventListener('pointerenter', () => {
+        gsap.fromTo(glint, { xPercent: -160 }, { xPercent: 160, duration: 0.9, ease: 'power2.inOut' });
+        if (img) gsap.to(img, { scale: 1.08, duration: 1.1, ease: 'expo.out' });
+      }, { passive: true });
+      card.addEventListener('pointerleave', () => {
+        if (img) gsap.to(img, { scale: 1.02, duration: 0.9, ease: 'expo.out' });
+      }, { passive: true });
+    }
+  });
+
   /* ---- contadores ---- */
   gsap.utils.toArray('.metric-num').forEach((el) => {
     const target = +el.dataset.count;
