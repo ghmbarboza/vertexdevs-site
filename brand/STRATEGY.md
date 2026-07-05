@@ -103,3 +103,18 @@ Cadência consolidada semanal:
 ## 6. Dependências e handoffs
 - **Sessão B**: CRM com campo `origem` por consulta; dashboard de pipeline (consultas→proposta→fechado); atendente IA respondendo o form em <5 min. → registrado em Handoffs.
 - **Fundador**: aprovar preços T1/T2/T3; 30 min/dia de LinkedIn+rede (única coisa que IA não substitui: a assinatura pessoal); lista de contatos da base p/ reativação.
+
+---
+
+## ANEXO A — LinkedIn: arquitetura de automação e warm-up (04/07)
+
+**Dois motores:**
+1. **Publicação (API oficial, via Zernio)**: 3 posts/semana agendados igual ao IG — arte maison + texto-case 1ª pessoa. 100% automatizado.
+2. **Construção de rede (MCP navegador, sessão logada)**: busca de decisores, convites com nota, DMs consultivas e leitura de inbox — operado pela Sessão A com limites de segurança.
+
+**REALIDADE: a conta tem 16 conexões (nova).** LinkedIn restringe contas novas com automação agressiva. Protocolo de warm-up obrigatório:
+- Semana 1–2: completar perfil (foto/capa Vertex, headline com Vertex, experiência "Founder @ Vertex"), conectar só com conhecidos (base pessoal), 5 convites/dia, engajar 10 min/dia em posts do setor
+- Semana 3–4: 8–10 convites/dia com nota personalizada (decisores dos setores-alvo), primeiro post
+- Mês 2+: 15–20 convites/dia, 3 posts/semana, DM só p/ quem aceitou + engajou
+- Kill-switch: qualquer aviso do LinkedIn → pausa total de 7 dias
+- Meta revisada: canal madura em set/out (era o previsto na rampa — 2 consultas/semana a partir de SETEMBRO)
