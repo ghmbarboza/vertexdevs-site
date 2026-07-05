@@ -59,11 +59,11 @@ Escrevemos como uma maison: sóbrio, declarativo, seguro. A grandiosidade vem da
 ## 4. Instagram (@vertex.devs)
 
 **Nome:** Vertex — Engenharia & IA
-**Bio oficial** (a bio é a fachada do ateliê — afirma, não explica; o site responde):
+**Bio oficial** (em inglês — código das maisons, posicionamento internacional; a bio afirma, o site responde):
 ```
-Alta engenharia de software & IA.
-Cada sistema, uma peça única.
-Consultas privadas ↓
+Bespoke software & AI.
+Every system, one of one.
+Private consultations ↓
 ```
 **Link:** https://vertexdevs.org · **Categoria:** Empresa de tecnologia da informação
 
