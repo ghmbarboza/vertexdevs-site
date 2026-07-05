@@ -118,3 +118,27 @@ Cadência consolidada semanal:
 - Mês 2+: 15–20 convites/dia, 3 posts/semana, DM só p/ quem aceitou + engajou
 - Kill-switch: qualquer aviso do LinkedIn → pausa total de 7 dias
 - Meta revisada: canal madura em set/out (era o previsto na rampa — 2 consultas/semana a partir de SETEMBRO)
+
+---
+
+## ANEXO B — Alavancas de conversão e posicionamento (05/07)
+*Além dos 5 canais de distribuição. Ordenadas por impacto no R$1M.*
+
+### TIER 1 — fazer já (movem o pipeline direto)
+1. **Prova com números (case studies).** High-ticket compra prova, não promessa. Transformar 3 peças da coleção em estudos de caso reais (mesmo anônimos): situação → o que construímos → resultado mensurável. É a alavanca nº1 de conversão e já temos o material. Vira página no site + carrossel + PDF de proposta.
+2. **Cartografia como porta de entrada produtizada.** Landing própria (/cartografia) com escopo fixo, prazo (2 semanas), preço (R$7,5k) e **reversão de risco** ("o mapa é seu, converta ou não em projeto"). Baixa a barreira do primeiro sim. Funil próprio + Pixel Lead.
+3. **Parcerias de canal (40% da meta — formalizar).** One-pager + comissão (10-15%) para agências de tráfego, contabilidades consultivas e consultorias de gestão que atendem PME e não constroem software. Eles vendem a Cartografia, a Vertex entrega. Meta: fechar 5 parceiros até agosto.
+4. **Motor de indicação da base.** 300+ projetos = rede quente adormecida. Mensagem 1-a-1 (não broadcast) para contatos dos últimos 24 meses apresentando a Vertex + Cartografia. Maior ROI de todos: confiança já existe.
+
+### TIER 2 — compõem ao longo do trimestre
+5. **Newsletter / captura de e-mail.** O nicho de IA-para-negócios vive de newsletter (modelo Rafael Milagre, 2,3k assinantes). Soft-capture no site para quem ainda não quer consultar → audiência PRÓPRIA, imune a algoritmo. Um ensaio quinzenal (o "Diário do Estúdio") alimenta e-mail + LinkedIn + SEO de uma vez.
+6. **Flywheel perfil ↔ página.** Agora que os dois existem: página posta institucional, fundador comenta/humaniza, colegas repostam (employee advocacy). Cada post vive nos dois palcos.
+7. **Nomear o método (categoria própria).** "Cartografia" já é um bom nome — transformar em framework registrável e citável (as 4 Complicações). Marca que dá nome ao próprio método é difícil de comparar por preço.
+8. **WhatsApp como canal de nutrição.** Número business já conectado — lista/canal para audiência morna (quem baixou o mapa, quem comentou) receber bastidor e convite. Warm, não frio.
+
+### TIER 3 — depois / com cuidado
+9. **Conteúdo de autoridade p/ SEO.** Ensaios técnicos que rankeiam fundo de funil ("automação de cotações B2B", "atendimento telefônico com IA") — juros compostos p/ 2027.
+10. **Visibilidade via ecossistema Viver de IA.** Ser referência de engenharia lá dentro alimenta a Vertex indiretamente — SEM conflito de interesse (posicionamento, nunca captação direta de cliente do empregador).
+
+### A verdade estratégica
+O gargalo do R$1M não é tráfego — é **prova + oferta de entrada + parcerias**. Tier 1 ataca exatamente isso. Os canais (IG/LinkedIn/outbound) enchem o topo; o Tier 1 converte o meio e o fundo.
