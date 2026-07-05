@@ -37,10 +37,12 @@
   <main id="principal">
     <!-- ============ HERO ============ -->
     <section class="hero" aria-labelledby="hero-heading">
-      <div class="hero-guilloche" aria-hidden="true"></div>
-      <div class="hero-glow" aria-hidden="true"></div>
-      <canvas class="hero-canvas" aria-hidden="true"></canvas>
-      <img class="hero-mark" src="assets/vertex-logo.png" alt="" width="800" height="800" loading="eager" fetchpriority="high" aria-hidden="true" data-hero-mark />
+      <div class="hero-media" aria-hidden="true">
+        <video class="hero-video" autoplay muted loop playsinline preload="auto" poster="assets/hero-poster.jpg">
+          <source src="assets/hero-film.mp4" type="video/mp4" />
+        </video>
+        <div class="hero-veil"></div>
+      </div>
       <div class="hero-inner">
         <span class="label" data-hero>Alta engenharia de software &amp; IA</span>
         <h1 id="hero-heading">
@@ -186,6 +188,5 @@
   <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
   <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
   <script defer src="main.js"></script>
-  <script defer src="hero-particles.js"></script>
 </body>
 </html>
