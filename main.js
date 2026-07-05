@@ -40,65 +40,47 @@
     });
   });
 
-  /* ---- vitrine: entrada cinematográfica + glint + tilt 3D ---- */
-  const fine = matchMedia('(hover: hover) and (pointer: fine)').matches;
+  /* ---- vitrine: cerimônia de entrada + parallax de gravidade (sem tilt) ---- */
   gsap.utils.toArray('.product-card').forEach((card, i) => {
     const fig = card.querySelector('figure');
     const img = card.querySelector('figure img');
     const idx = card.querySelector('.product-index');
     const tags = card.querySelectorAll('.product-stack li');
 
-    /* camadas dinâmicas: glint, glare e hairline */
     const glint = document.createElement('div'); glint.className = 'card-glint';
-    const glare = document.createElement('div'); glare.className = 'card-glare';
-    card.appendChild(glint); card.appendChild(glare);
+    card.appendChild(glint);
     let hairline = null;
     if (fig) { hairline = document.createElement('div'); hairline.className = 'card-hairline'; fig.appendChild(hairline); }
 
-    /* entrada: cortina + imagem assentando + índice + hairline + tags */
+    /* entrada: lenta, pesada, cerimonial */
     const tl = gsap.timeline({
-      scrollTrigger: { trigger: card, start: 'top 86%', once: true },
-      defaults: { ease: 'expo.out' }
+      scrollTrigger: { trigger: card, start: 'top 84%', once: true },
+      defaults: { ease: 'power3.out' }
     });
     tl.fromTo(card,
-        { opacity: 0, y: 70, clipPath: 'inset(14% 8% 14% 8%)' },
-        { opacity: 1, y: 0, clipPath: 'inset(0% 0% 0% 0%)', duration: 1.15, delay: (i % 2) * 0.09 });
-    if (img) tl.fromTo(img, { scale: 1.28, yPercent: 6 }, { scale: 1.02, yPercent: 0, duration: 1.6 }, '<');
-    if (idx) tl.fromTo(idx, { opacity: 0, x: 26 }, { opacity: 1, x: 0, duration: 0.8 }, '-=1.1');
-    if (hairline) tl.to(hairline, { scaleX: 1, duration: 1.1, ease: 'power3.inOut' }, '-=1.0');
-    if (tags.length) tl.fromTo(tags, { opacity: 0, y: 12 }, { opacity: 1, y: 0, duration: 0.5, stagger: 0.06 }, '-=0.9');
-    tl.fromTo(glint, { xPercent: -160 }, { xPercent: 160, duration: 1.2, ease: 'power2.inOut' }, '-=1.2');
+        { opacity: 0, y: 40, clipPath: 'inset(0% 0% 18% 0%)' },
+        { opacity: 1, y: 0, clipPath: 'inset(0% 0% 0% 0%)', duration: 1.6, delay: (i % 2) * 0.12 });
+    if (img) tl.fromTo(img, { scale: 1.18 }, { scale: 1.04, duration: 2.4, ease: 'power2.out' }, '<');
+    if (idx) tl.fromTo(idx, { opacity: 0 }, { opacity: 1, duration: 1.2 }, '-=1.8');
+    if (hairline) tl.to(hairline, { scaleX: 1, duration: 1.6, ease: 'power2.inOut' }, '-=1.6');
+    if (tags.length) tl.fromTo(tags, { opacity: 0 }, { opacity: 1, duration: 0.9, stagger: 0.08 }, '-=1.2');
+    tl.fromTo(glint, { xPercent: -170 }, { xPercent: 170, duration: 1.8, ease: 'sine.inOut' }, '-=1.6');
 
-    /* tilt 3D + glare seguindo o cursor (só desktop) */
-    if (fine) {
-      const rx = gsap.quickTo(card, 'rotationX', { duration: 0.6, ease: 'power3.out' });
-      const ry = gsap.quickTo(card, 'rotationY', { duration: 0.6, ease: 'power3.out' });
-      const ipx = img ? gsap.quickTo(img, 'xPercent', { duration: 0.8, ease: 'power3.out' }) : null;
-      const ipy = img ? gsap.quickTo(img, 'yPercent', { duration: 0.8, ease: 'power3.out' }) : null;
-      gsap.set(card, { transformPerspective: 1200 });
-
-      card.addEventListener('pointermove', (e) => {
-        const r = card.getBoundingClientRect();
-        const px = (e.clientX - r.left) / r.width - 0.5;
-        const py = (e.clientY - r.top) / r.height - 0.5;
-        rx(-py * 5); ry(px * 6);
-        if (ipx) ipx(-px * 2.4);
-        if (ipy) ipy(-py * 2.4);
-        card.style.setProperty('--gx', ((px + 0.5) * 100) + '%');
-        card.style.setProperty('--gy', ((py + 0.5) * 100) + '%');
-      }, { passive: true });
-
-      card.addEventListener('pointerleave', () => { rx(0); ry(0); if (ipx) ipx(0); if (ipy) ipy(0); }, { passive: true });
-
-      /* glint extra + zoom da imagem ao passar o mouse */
-      card.addEventListener('pointerenter', () => {
-        gsap.fromTo(glint, { xPercent: -160 }, { xPercent: 160, duration: 0.9, ease: 'power2.inOut' });
-        if (img) gsap.to(img, { scale: 1.08, duration: 1.1, ease: 'expo.out' });
-      }, { passive: true });
-      card.addEventListener('pointerleave', () => {
-        if (img) gsap.to(img, { scale: 1.02, duration: 0.9, ease: 'expo.out' });
-      }, { passive: true });
+    /* gravidade: a peça flutua devagar dentro da moldura conforme o scroll */
+    if (img) {
+      gsap.fromTo(img, { yPercent: -5 }, {
+        yPercent: 5, ease: 'none',
+        scrollTrigger: { trigger: card, start: 'top bottom', end: 'bottom top', scrub: 1.2 }
+      });
     }
+
+    /* hover: quase nada — um zoom lentíssimo, e só */
+    card.addEventListener('pointerenter', () => {
+      if (img) gsap.to(img, { scale: 1.09, duration: 2.2, ease: 'power2.out' });
+    }, { passive: true });
+    card.addEventListener('pointerleave', () => {
+      if (img) gsap.to(img, { scale: 1.04, duration: 1.6, ease: 'power2.out' });
+    }, { passive: true });
   });
 
   /* ---- contadores ---- */
