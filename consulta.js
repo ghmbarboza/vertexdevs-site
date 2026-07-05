@@ -51,9 +51,9 @@
 
   function stepValid(idx) {
     const step = steps[idx];
-    const input = step.querySelector('.c-input');
+    const inputs = step.querySelectorAll('.c-input');
     const err = step.querySelector('[data-error]');
-    if (!input) {
+    if (inputs.length === 0) {
       const hidden = step.querySelector('input[type="hidden"]');
       if (hidden && !hidden.value) {
         const opts = step.querySelector('.c-options');
@@ -62,15 +62,25 @@
       }
       return true;
     }
-    let ok = input.value.trim().length >= 2;
-    if (input.type === 'tel') {
-      const digits = input.value.replace(/\D/g, '');
-      ok = digits.length >= 10 && digits.length <= 13;
-    }
-    if (err) err.classList.toggle('is-visible', !ok);
-    if (!ok && hasGsap) gsap.fromTo(input, { x: -7 }, { x: 0, duration: 0.5, ease: 'elastic.out(1, 0.35)' });
-    if (ok && input.name) answers[input.name] = input.value.trim();
-    return ok;
+    let allOk = true;
+    inputs.forEach((input) => {
+      const v = input.value.trim();
+      let ok = v.length >= 2;
+      if (input.type === 'tel') {
+        const digits = v.replace(/\D/g, '');
+        ok = digits.length >= 10 && digits.length <= 13;
+      } else if (input.type === 'email') {
+        ok = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v);
+      }
+      if (!ok) {
+        allOk = false;
+        if (hasGsap) gsap.fromTo(input, { x: -7 }, { x: 0, duration: 0.5, ease: 'elastic.out(1, 0.35)' });
+      } else if (input.name) {
+        answers[input.name] = v;
+      }
+    });
+    if (err) err.classList.toggle('is-visible', !allOk);
+    return allOk;
   }
 
   function next() {
@@ -115,7 +125,8 @@
       ['Procura', answers.busca],
       ['Momento', answers.momento],
       ['Investimento', answers.investimento],
-      ['WhatsApp', answers.whatsapp]
+      ['WhatsApp', answers.whatsapp],
+      ['E-mail', answers.email]
     ];
     ficha.innerHTML = rows
       .filter(([, v]) => v)
@@ -147,6 +158,7 @@
           momento: answers.momento,
           investimento: answers.investimento,
           whatsapp: answers.whatsapp,
+          email: answers.email,
           user_agent: navigator.userAgent.slice(0, 250),
           pagina_origem: document.referrer || location.href
         })
@@ -162,7 +174,7 @@
         'Solicitação de consulta privada — vertexdevs.org', '',
         `Nome: ${answers.nome || '-'}`, `Empresa: ${answers.empresa || '-'}`,
         `Procura: ${answers.busca || '-'}`, `Momento: ${answers.momento || '-'}`,
-        `Investimento: ${answers.investimento || '-'}`, `WhatsApp: ${answers.whatsapp || '-'}`
+        `Investimento: ${answers.investimento || '-'}`, `WhatsApp: ${answers.whatsapp || '-'}`, `E-mail: ${answers.email || '-'}`
       ].join('\n');
       window.open('https://wa.me/554892044331?text=' + encodeURIComponent(msg), '_blank', 'noopener');
       show(8, 1);
