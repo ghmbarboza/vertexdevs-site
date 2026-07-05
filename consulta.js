@@ -134,8 +134,9 @@
       .join('');
   }
 
-  const SUPABASE_URL = 'https://kmgnjlcmswbbsntwdvef.supabase.co';
-  const SUPABASE_KEY = 'sb_publishable_9DJQOz3zsSm4s-WRkv31IA_Gu55pVCQ';
+  // Ingestão única: cria o card no CRM (contacts+deals) e espelha na peneira
+  // (site_consultas) que habilita o atendente a responder no WhatsApp.
+  const INTAKE_URL = 'https://wlwutasdvwxfsbyxggfd.supabase.co/functions/v1/form-intake';
 
   form.addEventListener('submit', async (e) => {
     e.preventDefault();
@@ -143,14 +144,9 @@
     if (btn) { btn.disabled = true; btn.textContent = 'Registrando…'; }
 
     try {
-      const res = await fetch(SUPABASE_URL + '/rest/v1/site_consultas', {
+      const res = await fetch(INTAKE_URL, {
         method: 'POST',
-        headers: {
-          'apikey': SUPABASE_KEY,
-          'Authorization': 'Bearer ' + SUPABASE_KEY,
-          'Content-Type': 'application/json',
-          'Prefer': 'return=minimal'
-        },
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           nome: answers.nome,
           empresa: answers.empresa,
@@ -163,7 +159,7 @@
           pagina_origem: document.referrer || location.href
         })
       });
-      if (!res.ok) throw new Error('insert failed ' + res.status);
+      if (!res.ok) throw new Error('intake failed ' + res.status);
       if (window.fbq) fbq('track', 'Lead');
       show(8, 1);
       if (bar) bar.style.width = '100%';
