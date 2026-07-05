@@ -123,23 +123,53 @@
       .join('');
   }
 
-  form.addEventListener('submit', (e) => {
-    e.preventDefault();
-    const msg = [
-      'Solicitação de consulta privada — vertexdevs.org',
-      '',
-      `Nome: ${answers.nome || '-'}`,
-      `Empresa: ${answers.empresa || '-'}`,
-      `Procura: ${answers.busca || '-'}`,
-      `Momento: ${answers.momento || '-'}`,
-      `Investimento: ${answers.investimento || '-'}`,
-      `WhatsApp: ${answers.whatsapp || '-'}`
-    ].join('\n');
+  const SUPABASE_URL = 'https://kmgnjlcmswbbsntwdvef.supabase.co';
+  const SUPABASE_KEY = 'sb_publishable_9DJQOz3zsSm4s-WRkv31IA_Gu55pVCQ';
 
-    if (window.fbq) fbq('track', 'Lead');
-    window.open('https://wa.me/554892044331?text=' + encodeURIComponent(msg), '_blank', 'noopener');
-    show(8, 1);
-    if (bar) bar.style.width = '100%';
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const btn = document.getElementById('enviar');
+    if (btn) { btn.disabled = true; btn.textContent = 'Registrando…'; }
+
+    try {
+      const res = await fetch(SUPABASE_URL + '/rest/v1/site_consultas', {
+        method: 'POST',
+        headers: {
+          'apikey': SUPABASE_KEY,
+          'Authorization': 'Bearer ' + SUPABASE_KEY,
+          'Content-Type': 'application/json',
+          'Prefer': 'return=minimal'
+        },
+        body: JSON.stringify({
+          nome: answers.nome,
+          empresa: answers.empresa,
+          busca: answers.busca,
+          momento: answers.momento,
+          investimento: answers.investimento,
+          whatsapp: answers.whatsapp,
+          user_agent: navigator.userAgent.slice(0, 250),
+          pagina_origem: document.referrer || location.href
+        })
+      });
+      if (!res.ok) throw new Error('insert failed ' + res.status);
+      if (window.fbq) fbq('track', 'Lead');
+      show(8, 1);
+      if (bar) bar.style.width = '100%';
+    } catch (err) {
+      /* fallback: nunca perder o lead — segue pelo WhatsApp */
+      if (window.fbq) fbq('track', 'Lead');
+      const msg = [
+        'Solicitação de consulta privada — vertexdevs.org', '',
+        `Nome: ${answers.nome || '-'}`, `Empresa: ${answers.empresa || '-'}`,
+        `Procura: ${answers.busca || '-'}`, `Momento: ${answers.momento || '-'}`,
+        `Investimento: ${answers.investimento || '-'}`, `WhatsApp: ${answers.whatsapp || '-'}`
+      ].join('\n');
+      window.open('https://wa.me/554892044331?text=' + encodeURIComponent(msg), '_blank', 'noopener');
+      show(8, 1);
+      if (bar) bar.style.width = '100%';
+    } finally {
+      if (btn) { btn.disabled = false; btn.textContent = 'Solicitar consulta privada'; }
+    }
   });
 
   /* entrada da página */
