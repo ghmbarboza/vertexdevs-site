@@ -459,3 +459,119 @@ section { padding-inline: 1.5rem; }
   .card-glint { display: none; }
   .card-hairline { transform: none; }
 }
+
+/* ---------- consulta privada (gateway) ---------- */
+.consulta-page { overflow: hidden; }
+.consulta-main {
+  position: relative; min-height: 100svh;
+  display: grid; place-items: center;
+  padding: 7rem 1.5rem 4rem;
+  background: radial-gradient(80rem 50rem at 50% -20%, oklch(19% 0.04 258 / 0.8), transparent 65%), var(--color-bg-deep);
+}
+.consulta-progress {
+  position: fixed; top: 0; left: 0; right: 0; height: 2px; z-index: 120;
+  background: oklch(30% 0.03 258 / 0.3);
+}
+.consulta-progress span {
+  display: block; height: 100%; width: 0;
+  background: linear-gradient(90deg, var(--color-gold), var(--color-sapphire));
+  transition: width 700ms var(--ease-out-expo);
+}
+.consulta-shell { position: relative; z-index: 2; width: min(46rem, 100%); }
+
+.c-step { display: none; }
+.c-step.is-active { display: block; }
+
+.c-num {
+  font-family: var(--font-display); font-style: italic;
+  font-size: 1.1rem; color: var(--color-gold); display: block; margin-bottom: 1.2rem;
+}
+.c-num i { color: var(--color-muted); font-style: italic; }
+
+.c-title {
+  font-family: var(--font-display); font-weight: 400;
+  font-size: clamp(2.1rem, 1.3rem + 3.4vw, 4rem); line-height: 1.08;
+  color: var(--color-platinum);
+}
+.c-title em { color: transparent; background: linear-gradient(115deg, var(--color-platinum) 25%, var(--color-sapphire) 80%); -webkit-background-clip: text; background-clip: text; }
+.c-title--sm { font-size: clamp(1.8rem, 1.2rem + 2.4vw, 3rem); }
+
+.c-sub { margin-top: 1.4rem; color: var(--color-muted); max-width: 48ch; }
+.c-sub--tight { margin-top: 0.9rem; font-size: 0.95rem; }
+
+.c-input {
+  display: block; width: 100%;
+  margin-top: 2.4rem;
+  background: transparent; border: 0; outline: 0;
+  border-bottom: 1px solid var(--color-line);
+  font-family: var(--font-display); font-weight: 400;
+  font-size: clamp(1.5rem, 1.1rem + 1.6vw, 2.3rem);
+  color: var(--color-platinum);
+  padding: 0.4rem 0 0.8rem;
+  transition: border-color 400ms ease;
+  border-radius: 0;
+}
+.c-input::placeholder { color: oklch(45% 0.02 252); }
+.c-input:focus { border-bottom-color: var(--color-gold); }
+
+.c-error {
+  margin-top: 0.9rem; font-size: 0.85rem; color: oklch(70% 0.12 25);
+  opacity: 0; transition: opacity 300ms ease;
+}
+.c-error.is-visible { opacity: 1; }
+
+.c-options { margin-top: 2.4rem; display: grid; gap: 0.8rem; }
+.c-option {
+  text-align: left; cursor: pointer;
+  background: var(--color-surface);
+  border: 1px solid var(--color-line);
+  color: var(--color-text);
+  font-family: var(--font-label); font-size: 1rem;
+  padding: 1.15rem 1.4rem; border-radius: 2px;
+  transition: border-color 350ms ease, background-color 350ms ease, transform 350ms var(--ease-out-expo);
+}
+.c-option i { font-family: var(--font-display); font-style: italic; color: var(--color-gold); margin-right: 0.9rem; }
+.c-option:hover { border-color: oklch(80% 0.08 85 / 0.4); }
+.c-option:focus-visible { outline: 2px solid var(--color-sapphire); outline-offset: 2px; }
+.c-option.is-selected { border-color: var(--color-gold); background: oklch(17% 0.025 260); }
+
+.c-actions { margin-top: 2.6rem; display: flex; align-items: center; gap: 1.3rem; flex-wrap: wrap; }
+.c-actions--col { flex-direction: column; align-items: flex-start; gap: 1rem; }
+.c-hint { color: var(--color-muted); font-size: 0.82rem; }
+.c-hint kbd {
+  font-family: var(--font-label); font-size: 0.75rem;
+  border: 1px solid var(--color-line); border-radius: 3px;
+  padding: 0.15rem 0.45rem; color: var(--color-silver, var(--color-platinum));
+}
+
+.c-ficha { margin-top: 2.2rem; border-top: 1px solid var(--color-line); }
+.c-ficha-row {
+  display: grid; grid-template-columns: 9rem 1fr; gap: 1rem;
+  padding: 1rem 0; border-bottom: 1px solid var(--color-line);
+}
+.c-ficha dt {
+  font-size: 0.72rem; font-weight: 500; letter-spacing: 0.28em; text-transform: uppercase;
+  color: var(--color-gold); padding-top: 0.2rem;
+}
+.c-ficha dd { font-family: var(--font-display); font-size: 1.25rem; color: var(--color-platinum); }
+
+.c-back {
+  background: none; border: 0; cursor: pointer;
+  color: var(--color-muted); font-size: 0.85rem;
+  text-decoration: underline; text-underline-offset: 4px;
+  transition: color 250ms ease;
+}
+.c-back:hover { color: var(--color-gold); }
+
+.c-prev {
+  position: fixed; left: clamp(1rem, 4vw, 3rem); bottom: clamp(1.2rem, 4vh, 3rem); z-index: 50;
+  width: 3rem; height: 3rem; border-radius: 50%;
+  background: transparent; border: 1px solid var(--color-line);
+  color: var(--color-muted); font-size: 1.1rem; cursor: pointer;
+  transition: border-color 300ms ease, color 300ms ease;
+}
+.c-prev:hover { border-color: var(--color-gold); color: var(--color-gold); }
+
+@media (max-width: 600px) {
+  .c-ficha-row { grid-template-columns: 1fr; gap: 0.2rem; }
+}

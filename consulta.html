@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Consulta Privada — Vertex</title>
+  <meta name="description" content="Solicite uma consulta privada com a Vertex. Poucos projetos por vez — a conversa começa aqui." />
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="64x64" href="assets/favicon-64.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png" />
+  <meta property="og:title" content="Consulta Privada — Vertex" />
+  <meta property="og:description" content="Poucos projetos por vez. A conversa começa aqui." />
+  <meta property="og:image" content="https://vertexdevs.org/assets/og-image.jpg" />
+  <meta property="og:url" content="https://vertexdevs.org/consulta.html" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <!-- Meta Pixel -->
+  <script>
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+    n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+    document,'script','https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1021077700509079');
+    fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none" alt=""
+    src="https://www.facebook.com/tr?id=1021077700509079&ev=PageView&noscript=1" /></noscript>
+</head>
+<body class="consulta-page">
+  <a class="skip-link" href="#principal">Pular para o conteúdo</a>
+  <div class="noise" aria-hidden="true"></div>
+
+  <header class="site-header is-scrolled">
+    <nav aria-label="Navegação principal">
+      <a class="wordmark" href="index.html">VERTEX</a>
+      <div class="nav-links">
+        <a href="produtos.html">A Coleção</a>
+        <a href="metodo.html">O Método</a>
+        <a href="estudio.html">O Estúdio</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="principal" class="consulta-main">
+    <div class="hero-guilloche" aria-hidden="true"></div>
+    <div class="consulta-progress" aria-hidden="true"><span id="progress-bar"></span></div>
+
+    <form id="consulta-form" class="consulta-shell" autocomplete="on" novalidate>
+
+      <!-- 0 · abertura -->
+      <section class="c-step is-active" data-step="0">
+        <span class="label">Consulta privada</span>
+        <h1 class="c-title">A conversa começa <em>aqui</em>.</h1>
+        <p class="c-sub">Trabalhamos com poucos projetos por vez. Seis perguntas nos dizem se a sua operação é candidata a um sistema one-of-one — leva menos de dois minutos.</p>
+        <div class="c-actions">
+          <button type="button" class="btn btn-primary" data-next>Começar</button>
+          <span class="c-hint">ou pressione <kbd>Enter</kbd></span>
+        </div>
+      </section>
+
+      <!-- 1 · nome -->
+      <section class="c-step" data-step="1">
+        <span class="c-num">01 <i>/</i> 06</span>
+        <h2 class="c-title">Como devemos <em>chamá-lo</em>?</h2>
+        <input class="c-input" id="f-nome" name="nome" type="text" placeholder="Seu nome" autocomplete="name" required />
+        <p class="c-error" data-error>Precisamos do seu nome para continuar.</p>
+        <div class="c-actions">
+          <button type="button" class="btn btn-primary" data-next>Continuar</button>
+          <span class="c-hint"><kbd>Enter</kbd></span>
+        </div>
+      </section>
+
+      <!-- 2 · empresa -->
+      <section class="c-step" data-step="2">
+        <span class="c-num">02 <i>/</i> 06</span>
+        <h2 class="c-title">Qual é a sua <em>empresa</em>?</h2>
+        <input class="c-input" id="f-empresa" name="empresa" type="text" placeholder="Nome da empresa ou site" autocomplete="organization" required />
+        <p class="c-error" data-error>Conte-nos qual é a empresa.</p>
+        <div class="c-actions">
+          <button type="button" class="btn btn-primary" data-next>Continuar</button>
+          <span class="c-hint"><kbd>Enter</kbd></span>
+        </div>
+      </section>
+
+      <!-- 3 · o que procura -->
+      <section class="c-step" data-step="3">
+        <span class="c-num">03 <i>/</i> 06</span>
+        <h2 class="c-title">O que sua operação <em>procura</em>?</h2>
+        <div class="c-options" role="radiogroup" aria-label="O que procura">
+          <button type="button" class="c-option" data-value="Agentes de IA (atendimento, vendas, voz)"><i>I.</i> Agentes de IA — atendimento, vendas, voz</button>
+          <button type="button" class="c-option" data-value="Automação de operação crítica"><i>II.</i> Automação de operação crítica</button>
+          <button type="button" class="c-option" data-value="Produto digital sob medida (SaaS, portal, plataforma)"><i>III.</i> Produto sob medida — SaaS, portal, plataforma</button>
+          <button type="button" class="c-option" data-value="Ainda explorando possibilidades"><i>IV.</i> Ainda estou explorando</button>
+        </div>
+        <input type="hidden" id="f-busca" name="busca" required />
+      </section>
+
+      <!-- 4 · momento -->
+      <section class="c-step" data-step="4">
+        <span class="c-num">04 <i>/</i> 06</span>
+        <h2 class="c-title">Em que <em>momento</em> ela está?</h2>
+        <div class="c-options" role="radiogroup" aria-label="Momento da operação">
+          <button type="button" class="c-option" data-value="Operação rodando, com dores claras"><i>I.</i> Rodando — com dores claras</button>
+          <button type="button" class="c-option" data-value="Crescendo e precisando escalar"><i>II.</i> Crescendo — preciso escalar</button>
+          <button type="button" class="c-option" data-value="Situação crítica, preciso agir rápido"><i>III.</i> Crítica — preciso agir rápido</button>
+          <button type="button" class="c-option" data-value="Ideia em validação"><i>IV.</i> Ideia em validação</button>
+        </div>
+        <input type="hidden" id="f-momento" name="momento" required />
+      </section>
+
+      <!-- 5 · investimento -->
+      <section class="c-step" data-step="5">
+        <span class="c-num">05 <i>/</i> 06</span>
+        <h2 class="c-title">Qual investimento está <em>contemplado</em>?</h2>
+        <p class="c-sub c-sub--tight">Sistemas sob medida da Vertex historicamente partem de R$ 20 mil.</p>
+        <div class="c-options" role="radiogroup" aria-label="Investimento">
+          <button type="button" class="c-option" data-value="R$ 20–60 mil"><i>I.</i> R$ 20–60 mil</button>
+          <button type="button" class="c-option" data-value="R$ 60–150 mil"><i>II.</i> R$ 60–150 mil</button>
+          <button type="button" class="c-option" data-value="Acima de R$ 150 mil"><i>III.</i> Acima de R$ 150 mil</button>
+          <button type="button" class="c-option" data-value="Prefiro conversar antes"><i>IV.</i> Prefiro conversar antes</button>
+        </div>
+        <input type="hidden" id="f-investimento" name="investimento" required />
+      </section>
+
+      <!-- 6 · contato -->
+      <section class="c-step" data-step="6">
+        <span class="c-num">06 <i>/</i> 06</span>
+        <h2 class="c-title">Onde encontramos <em>você</em>?</h2>
+        <p class="c-sub c-sub--tight">WhatsApp com DDD — é por ele que a consulta é conduzida.</p>
+        <input class="c-input" id="f-whats" name="whatsapp" type="tel" placeholder="(48) 99999-9999" autocomplete="tel" inputmode="tel" required />
+        <p class="c-error" data-error>Precisamos de um WhatsApp válido (com DDD).</p>
+        <div class="c-actions">
+          <button type="button" class="btn btn-primary" data-next>Revisar solicitação</button>
+          <span class="c-hint"><kbd>Enter</kbd></span>
+        </div>
+      </section>
+
+      <!-- 7 · ficha -->
+      <section class="c-step" data-step="7">
+        <span class="label">Sua solicitação</span>
+        <h2 class="c-title c-title--sm">Ficha de <em>consulta</em></h2>
+        <dl class="c-ficha" id="ficha"></dl>
+        <div class="c-actions c-actions--col">
+          <button type="submit" class="btn btn-primary btn-lg" id="enviar">Solicitar consulta privada</button>
+          <button type="button" class="c-back" data-restart>Corrigir respostas</button>
+        </div>
+      </section>
+
+      <!-- 8 · confirmação -->
+      <section class="c-step" data-step="8">
+        <span class="label">Recebido</span>
+        <h2 class="c-title">Sua solicitação foi <em>registrada</em>.</h2>
+        <p class="c-sub">Abrimos o seu WhatsApp com a ficha pronta — basta enviar. O estúdio responde pessoalmente, em geral no mesmo dia, para agendar a conversa de descoberta.</p>
+        <div class="c-actions">
+          <a class="btn btn-ghost" href="index.html">Voltar ao início</a>
+        </div>
+      </section>
+
+      <button type="button" class="c-prev" id="prev-btn" aria-label="Voltar pergunta" hidden>←</button>
+    </form>
+  </main>
+
+  <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+  <script defer src="consulta.js"></script>
+</body>
+</html>
