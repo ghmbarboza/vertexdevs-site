@@ -64,6 +64,7 @@
 - Projeção honesta a R$ 30/dia com criativo validado: 500-900 seguidores reais/mês → **2.000 em 8-12 semanas de escala**
 
 ## FASE 4 — Colheita (paralela à 3)
+- **Funil atualizado (04/07)**: CTAs do site → gateway `/consulta.html` (form 6 passos → Supabase vertex-core `site_consultas`, insert-only validado) com WhatsApp opcional pós-registro. Pixel dispara **Lead** no submit — a partir da Fase 2, campanhas podem otimizar p/ Lead (form) além de Contact (clique wa.me)
 - Highlight "Consultas" com fluxo: story → DM automática → WhatsApp Vertex
 - Toda legenda mantém o fecho-convite do kit
 - Report mensal: seguidores, custo/seguidor, DMs iniciadas, consultas marcadas
