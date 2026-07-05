@@ -53,7 +53,15 @@
     const step = steps[idx];
     const input = step.querySelector('.c-input');
     const err = step.querySelector('[data-error]');
-    if (!input) return true;
+    if (!input) {
+      const hidden = step.querySelector('input[type="hidden"]');
+      if (hidden && !hidden.value) {
+        const opts = step.querySelector('.c-options');
+        if (opts && hasGsap) gsap.fromTo(opts, { x: -7 }, { x: 0, duration: 0.5, ease: 'elastic.out(1, 0.35)' });
+        return false;
+      }
+      return true;
+    }
     let ok = input.value.trim().length >= 2;
     if (input.type === 'tel') {
       const digits = input.value.replace(/\D/g, '');
