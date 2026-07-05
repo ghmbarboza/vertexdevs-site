@@ -79,3 +79,55 @@
 - **Eu (automatizado)**: geração de artes/filmes, legendas no kit, agendamento na fila, leitura semanal de métricas via API, configuração do boost e da automação de DM, relatórios, kill-switch
 - **Você (5 min/semana)**: aprovar a fila do mês, responder DMs quentes, deletar/ajustar o que não curtir
 - **Gasto**: só ocorre com seu OK explícito ao abrir a Fase 2, e nunca acima de R$ 30/dia
+
+
+---
+
+# ANEXO v2.0 — Nível de execução
+
+## Calendário editorial (30 dias, 12 peças · seg/qua/sex 18h BRT)
+| # | Dia | Formato | Peça | Gancho |
+|---|-----|---------|------|--------|
+| 1 | Seg 1 | Carrossel ×4 | Coleção — Cotações B2B | "Horas de cotação. Minutos de sistema." |
+| 2 | Qua 1 | Reel (Sora) | Filme do mecanismo 9:16 | "Engenharia no seu ponto mais alto." |
+| 3 | Sex 1 | Carrossel ×4 | Método — 4 complicações | "Antes da primeira linha, o mapa." |
+| 4 | Seg 2 | Post único | Manifesto (cometa) | "Velocidade sem critério é dívida." |
+| 5 | Qua 2 | Carrossel ×4 | Coleção — Mídia paga | "Indicadores são espelho, não vitrine." |
+| 6 | Sex 2 | Reel (Sora) | Safira sendo lapidada | "Every system, one of one." |
+| 7 | Seg 3 | Carrossel ×4 | O que acompanha cada sistema | "Código, documentação, monitoramento. Seus." |
+| 8 | Qua 3 | Post único | Montblanc (pena/consultas) | "As consultas são privadas." |
+| 9 | Sex 3 | Carrossel ×4 | Coleção — Ativação/onboarding | "Retenção começa no primeiro minuto." |
+| 10 | Seg 4 | Reel (Sora) | Cartografia animada | "Mapeamos. Desenhamos. Construímos." |
+| 11 | Qua 4 | Carrossel ×4 | Coleção — Compras/estoque | "O capital de giro não dorme na prateleira." |
+| 12 | Sex 4 | Post único | Pirâmide de safira | "O ponto mais alto entre a ideia e o produto." |
+
+## Cortes de validação orgânica (por post)
+- Salvamento ≥ 1,5% do alcance · alcance não-seguidores ≥ 40% · visitas ao perfil ≥ 3% do alcance · visita→seguidor ≥ 5%
+- Reels: retenção ≥ 50% aos 3s. Peça 2× abaixo do corte → sai da rotação.
+
+## Arquitetura da campanha piloto (Fase 2)
+- **VTX-IG-GROWTH-P01** · objetivo Engajamento/visitas ao perfil · orçamento por conjunto (sem CBO)
+- Conjunto A `BR-Decisores-Interesse` R$15/d: BR, 28-55, interesses empreendedorismo/gestão/ERP/transformação digital, feed+Reels IG only
+- Conjunto B `BRPT-Advantage` R$15/d: BR+PT, Advantage+ semente "envolvidos 30d"
+- Criativo: carrossel vencedor do G1 intocado (preserva prova social) · UTM `utm_source=ig&utm_medium=paid&utm_campaign=p01`
+- Pré-requisito Fase 0: **Meta Pixel instalado no vertexdevs.org** (retarget de visitantes na Fase 3)
+
+## Roteiro da DM automática (comentário→DM, delay 2-5min)
+> "Obrigado pelo interesse na Vertex. Trabalhamos com poucos projetos por vez — se quiser entender se a sua operação é candidata a um sistema one-of-one, a conversa começa aqui: [WhatsApp]. Sem compromisso, sem script."
+
+## Escala (Fase 3) — regras operacionais
+- 70/30 campeão/desafiante semanal; desafiante vencedor herda os 70%
+- Retarget quinzenal (envolvidos 30d + Pixel do site) com o carrossel de consulta
+- Kill-switch: semana > R$4/seguidor → pausa no dia · frequência > 2,5 no frio → troca de criativo
+- Projeção: conservador R$2,50/seg (~4 meses p/ 2k) · base R$1,80 (~3 meses) · excepcional R$1,00 (~2 meses)
+
+## Linha do tempo (12 semanas)
+S1 fundação (R$0) · S2-3 validação (R$0) · S4 gate G1 · S5 piloto (R$210 cap) · S6-11 escala (R$30/d c/ kill-switch) · S12 report executivo (custo/seguidor, custo/consulta, verba do próximo tri)
+
+## Riscos & contingências
+- Criativo não valida → +2 semanas de iteração, verba travada
+- Checkpoint Meta → pausa 72h, retomada gradual, nunca automação cinza
+- Custo estoura → kill-switch + troca de criativo/público
+- Seguidor cresce sem consulta → reforço Fase 4 (retarget consulta 2×/mês + CTA explícito)
+
+*Versão visual deste playbook: artifact "Vertex — Playbook de Crescimento" (claude.ai).*
