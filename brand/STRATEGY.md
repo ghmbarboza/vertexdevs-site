@@ -135,6 +135,14 @@ Cadência consolidada semanal:
 
 **Decisão maior — Premium Business vs Sales Navigator:** para outbound cirúrgico (20% de R$1M), quem foi desenhado pra isso é o **Sales Navigator Core** (lead search com 20+ filtros, lead lists com alerta de troca de cargo/empresa, 50 InMail). Premium Business serve bem o founder-led orgânico (quem viu + InMail pontual + insights). **Plano:** rodar Premium Business agora; se o outbound começar a puxar pipeline em ago/set, subir pra Sales Navigator (tem trial 30d) — não pagar os dois.
 
+### DIREÇÃO ATUAL do LinkedIn (06/07): crescer rede + reconhecimento, NÃO prospecção ativa
+Decisão do fundador: por ora o objetivo do LinkedIn é **presença/audiência e reconhecimento**, não caçar cliente. Prospecção de venda (outbound cirúrgico do C3) fica em espera; o InMail de venda não é usado agora. Dois motores rodando, ambos operados por mim (Claude) sem o fundador tocar:
+
+1. **Conteúdo = reconhecimento (motor nº1).** Publicação automática no LinkedIn pessoal via Zernio (conta `69e7e2007dea335c2b1e8201`). Cadência: **3 posts/semana** (ter/qui + seg), 08h30 BRT, tom maison em 1ª pessoa (POV sobre IA+engenharia+negócio, bastidor de craft, prova concreta — feito pra gerar comentário/alcance, não pra vender). Reconhecimento vem de post consistente + engajamento, não de convite. *Limitação: o MCP do LinkedIn não posta nem comenta — quem publica é o Zernio; comentar em post alheio (grande amplificador de alcance) segue manual.*
+2. **Conexão de ecossistema = mais conexões.** Convites a founders/criadores de IA-para-negócios BR (público sobreposto ao nosso), com nota de networking puro (zero pitch), dentro do cap de warm-up. Cresce a rede e faz o conteúdo alcançar mais longe. Fonte: `search_people` (2º grau, alta atividade) → leitura de perfil → nota específica → `connect_with_person`. Primeiro lote (06/07): 6 founders (Galdino/Genesis, Paganini/GETTER, Scotti/Nama, Caio IA, Gadelha/G30, Figueroa/Portal Telemedicina).
+
+**Premium a serviço disso:** "quem viu seu perfil" = reconectar/aceitar quem já se interessou; Insights = escolher com quem vale conectar; Apresentações na rede = pedir intro quando há conexão em comum. **Ainda na mão do fundador (MCP não faz):** corrigir a HEADLINE — hoje lidera com "@ Viver de IA" e a Vertex só aparece no Sobre; para perfil founder-led, a headline precisa afirmar a Vertex.
+
 ---
 
 ## ANEXO B — Alavancas de conversão e posicionamento (05/07)
