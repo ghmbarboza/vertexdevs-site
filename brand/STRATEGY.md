@@ -143,6 +143,8 @@ Decisão do fundador: por ora o objetivo do LinkedIn é **presença/audiência e
 
 **Premium a serviço disso:** "quem viu seu perfil" = reconectar/aceitar quem já se interessou; Insights = escolher com quem vale conectar; Apresentações na rede = pedir intro quando há conexão em comum.
 
+**Crescer rede com "gente que já conhece" — mapa (06/07):** enviados hoje 8 convites (6 founders de IA ecossistema + 2 PYMK Floripa: Amábely Pereira, Robson Zimmermann). Aprendizados: (a) **lista de seguidores do Instagram NÃO é acessível por API** (Meta bloqueia; raspar = risco de ban da conta IG → não fazer). Ponte legítima = o fundador baixa o próprio export ("Central de Contas → Baixar suas informações → Seguidores e seguindo", JSON) e me entrega; aí eu procuro cada um no LinkedIn e conecto. (b) A sidebar PYMK do LinkedIn veio **vazia**; o núcleo conhecido (time Viver de IA) **já está com convite pendente** — poço automatizável já tocado. (c) Maior volume seguro de conhecidos = **2 cliques do fundador**: aceitar convites recebidos ("Minha rede → Convites") + importar contatos e-mail/telefone ("Minha rede → Contatos sincronizados"). Cadência segura que mantenho: ~10–15 convites/dia de conhecidos/2º grau, nunca estranho em massa.
+
 **HEADLINE — afirmar as DUAS casas (resolvido 06/07):** Viver de IA é emprego E vitrine; não sai. Vertex é o estúdio próprio. Num perfil pessoal as duas convivem — o truque é dar a cada uma um verbo distinto pra não parecer conflito (Vertex = *construir* sistemas sob medida; Viver de IA = *formar/mentorar* em IA). Headline recomendada (copy-paste do fundador — o MCP não edita perfil):
 > `Construo sistemas de IA sob medida @ Vertex · Formo e mentoro em IA @ Viver de IA | Engenharia de software aplicada | 300+ projetos, 2 países`
 
