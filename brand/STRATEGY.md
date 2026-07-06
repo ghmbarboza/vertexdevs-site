@@ -119,6 +119,22 @@ Cadência consolidada semanal:
 - Kill-switch: qualquer aviso do LinkedIn → pausa total de 7 dias
 - Meta revisada: canal madura em set/out (era o previsto na rampa — 2 consultas/semana a partir de SETEMBRO)
 
+### Premium Business — ferramentas por impacto no pipeline (06/07)
+*Conta agora é Premium Business (renova 04/08). O warm-up acima NÃO muda — Premium não libera automação agressiva em conta nova.*
+
+**USAR JÁ (movem pipeline):**
+1. **Quem viu seu perfil (lista completa desbloqueada)** = radar de intenção morna. Todo decisor-alvo que aparece ali cruza com a lista de 300 do outbound → gatilho de conexão com nota contextual ("vi que passou pelo perfil…"). Converte view passiva em conversa. Revisar 2×/semana.
+2. **InMail (15 créditos/mês)** = fala com decisor FORA da rede sem conectar antes (resposta ~3× melhor que e-mail frio). Reservar para os alvos mais valiosos do mês; casar com o **vídeo Sora personalizado** (arma secreta do C3). Nunca pitch — roteiro maison (observação específica + mini-insight). Não queimar os 15 de uma vez no início da conta.
+3. **Company/Business insights** (headcount growth, distribuição por função das empresas-alvo) = qualifica a lista de 300. Empresa crescendo em headcount = orçamento + dor de processo → prioriza a fila de outbound por sinal real, não por palpite.
+
+**COMPÕEM:**
+4. **Apresentações na rede** (introduction via conexão em comum) = o caminho mais quente (alimenta o C1 Rede, 40% da meta). Quando um alvo do outbound tem conexão mútua, pedir apresentação em vez de frio.
+5. **Busca sem limite comercial** = remove o cap de buscas do free; prospecção manual dos setores-alvo sem bater parede.
+
+**IGNORAR (career-focused, zero uso p/ B2B selling):** Coaching por IA (encenação de entrevista), Featured Applicant, Salary Insights. LinkedIn Learning = baixa prioridade (só se o fundador quiser tópico de vendas B2B).
+
+**Decisão maior — Premium Business vs Sales Navigator:** para outbound cirúrgico (20% de R$1M), quem foi desenhado pra isso é o **Sales Navigator Core** (lead search com 20+ filtros, lead lists com alerta de troca de cargo/empresa, 50 InMail). Premium Business serve bem o founder-led orgânico (quem viu + InMail pontual + insights). **Plano:** rodar Premium Business agora; se o outbound começar a puxar pipeline em ago/set, subir pra Sales Navigator (tem trial 30d) — não pagar os dois.
+
 ---
 
 ## ANEXO B — Alavancas de conversão e posicionamento (05/07)
