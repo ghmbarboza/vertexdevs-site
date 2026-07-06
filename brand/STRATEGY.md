@@ -141,7 +141,12 @@ Decisão do fundador: por ora o objetivo do LinkedIn é **presença/audiência e
 1. **Conteúdo = reconhecimento (motor nº1).** Publicação automática no LinkedIn pessoal via Zernio (conta `69e7e2007dea335c2b1e8201`). Cadência: **3 posts/semana** (ter/qui + seg), 08h30 BRT, tom maison em 1ª pessoa (POV sobre IA+engenharia+negócio, bastidor de craft, prova concreta — feito pra gerar comentário/alcance, não pra vender). Reconhecimento vem de post consistente + engajamento, não de convite. *Limitação: o MCP do LinkedIn não posta nem comenta — quem publica é o Zernio; comentar em post alheio (grande amplificador de alcance) segue manual.*
 2. **Conexão de ecossistema = mais conexões.** Convites a founders/criadores de IA-para-negócios BR (público sobreposto ao nosso), com nota de networking puro (zero pitch), dentro do cap de warm-up. Cresce a rede e faz o conteúdo alcançar mais longe. Fonte: `search_people` (2º grau, alta atividade) → leitura de perfil → nota específica → `connect_with_person`. Primeiro lote (06/07): 6 founders (Galdino/Genesis, Paganini/GETTER, Scotti/Nama, Caio IA, Gadelha/G30, Figueroa/Portal Telemedicina).
 
-**Premium a serviço disso:** "quem viu seu perfil" = reconectar/aceitar quem já se interessou; Insights = escolher com quem vale conectar; Apresentações na rede = pedir intro quando há conexão em comum. **Ainda na mão do fundador (MCP não faz):** corrigir a HEADLINE — hoje lidera com "@ Viver de IA" e a Vertex só aparece no Sobre; para perfil founder-led, a headline precisa afirmar a Vertex.
+**Premium a serviço disso:** "quem viu seu perfil" = reconectar/aceitar quem já se interessou; Insights = escolher com quem vale conectar; Apresentações na rede = pedir intro quando há conexão em comum.
+
+**HEADLINE — afirmar as DUAS casas (resolvido 06/07):** Viver de IA é emprego E vitrine; não sai. Vertex é o estúdio próprio. Num perfil pessoal as duas convivem — o truque é dar a cada uma um verbo distinto pra não parecer conflito (Vertex = *construir* sistemas sob medida; Viver de IA = *formar/mentorar* em IA). Headline recomendada (copy-paste do fundador — o MCP não edita perfil):
+> `Construo sistemas de IA sob medida @ Vertex · Formo e mentoro em IA @ Viver de IA | Engenharia de software aplicada | 300+ projetos, 2 países`
+
+Alternativas: (Vertex-first) `Founder @ Vertex · Especialista em IA @ Viver de IA | Engenharia de software & IA sob medida | 300+ sistemas em 2 países`. Abertura do "Sobre" que sustenta as duas: *"Penso e construo IA em dois palcos: como founder da Vertex, projeto sistemas sob medida em produção; na Viver de IA, formo e mentoro quem aplica IA no dia a dia."*
 
 ---
 
